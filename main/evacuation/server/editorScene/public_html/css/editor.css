@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 11, 2014, 2:30:18 PM
+    Author     : altieres
+*/
+#tools {
+    width: 15%;
+    height: 30em;
+    position: absolute;
+    top: 5px;
+    left: 1130px;
+}
+
+#windowFile{
+    position: absolute;
+    z-index: 34;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    //display: none;
+}
+
+#fileScroll {
+    width: 100%;
+    height: 30em;
+    overflow-y: scroll;
+}
+#file {
+    width: 100%;
+    height: 100%;
+}
+#submenu {
+    width: 100%;
+    height: 10%;
+}
+.grid {
+    width: 10em;
+    height: 10em;
+    position: static;
+}
+
+.row {
+    width: 10em;
+    height: 3.33em;
+}
+.column {
+    height: 3.33em;
+    width: 3.33em;
+}
+ div.information div.cell {
+    height: 3.33em;
+    width: 3.33em;
+}
+
+.menuZoom {
+    width: 100%;
+    height: 100%;
+}

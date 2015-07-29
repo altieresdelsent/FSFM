@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="/css/gridism" type="text/css" rel="stylesheet">
+        <link href="/css/visualizeSocial" type="text/css" rel="stylesheet">
+        <script src="/js/ready"></script>
+        <script src="/js/binaryParser"></script>
+        <script src="/js/zoom"></script>
+        <script src="/js/visualizeSocial"></script>
+    </head>
+    <body>
+        <canvas id="visualizeSocial">
+        </canvas>
+        <div id="tools">
+          <div class="grid">
+                <div class="unit one-quarter">
+                    isServer:
+                </div>
+                <div class="unit one-quarter">
+                    <input type="checkbox" id="isServer" value="isServer">
+                </div>
+                <div class="unit one-quarter">
+                    clean:
+                </div>
+                <div class="unit one-quarter">
+                    <input type="button" id="cleanRectangule" value="cleanRectangule">
+                </div>
+                <div class="unit one-quarter">
+                    pedPosio:
+                </div>
+                <div class="unit one-quarter">
+                    <input type="text" id="pedPosio" value="{x:0, y:0}">
+                </div>
+                <div class="unit one-quarter">
+                    otherPedPos:
+                </div>
+                <div class="unit one-quarter">
+                    <input type="text" id="otherPedPos" value="{x:1, y:1}">
+                </div>
+                <div class="unit one-quarter">
+                    pedVeloc:
+                </div>
+                <div class="unit one-quarter">
+                    <input type="text" id="pedVeloc" value="{x:1, y:1}">
+                </div>
+                <div class="unit one-quarter">
+                    otherPedVeloc:
+                </div>
+                <div class="unit one-quarter">
+                    <input type="text" id="otherPedVeloc" value="{x:0.1, y:0.1}">
+                </div>
+                <div class="unit one-quarter">
+                    DistancePeds:
+                </div>
+                <div class="unit one-quarter" id="DistancePeds">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    angleVelocityPed1:
+                </div>
+                <div class="unit one-quarter" id="angleVelocityPed1">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    angleVelocityPed2:
+                </div>
+                <div class="unit one-quarter" id="angleVelocityPed2">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    differenceAngle:
+                </div>
+                <div class="unit one-quarter" id="differenceAngle">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    totalVelPed1:
+                </div>
+                <div class="unit one-quarter" id="totalVelPed1">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    totalVelPed2:
+                </div>
+                <div class="unit one-quarter" id="totalVelPed2">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    relativeVelocity:
+                </div>
+                <div class="unit one-quarter" id="relativeVelocity">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    totalRelVelPed:
+                </div>
+                <div class="unit one-quarter" id="totalRelVelPed">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    angleRelativeVelocity:
+                </div>
+                <div class="unit one-quarter" id="angleRelativeVelocity">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    E:
+                </div>
+                <div class="unit one-quarter" id="E">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    angleE:
+                </div>
+                <div class="unit one-quarter" id="angleE">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    interactionVector:
+                </div>
+                <div class="unit one-quarter" id="interactionVector">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    interactionVectorAngle:
+                </div>
+                <div class="unit one-quarter" id="angleInteractionVector">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    forceAmout:
+                </div>
+                <div class="unit one-quarter" id="forceVelocity">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    forceAngle:
+                </div>
+                <div class="unit one-quarter" id="forceAngle">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    relationForceAngle:
+                </div>
+                <div class="unit one-quarter" id="relationForceAngle">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    result:
+                </div>
+                <div class="unit one-quarter" id="result">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    resultAngle:
+                </div>
+                <div class="unit one-quarter" id="resultAngle">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    thetaAngle:
+                </div>
+                <div class="unit one-quarter" id="thetaAngle">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    percentilAngle:
+                </div>
+                <div class="unit one-quarter" id="percentilAngle">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    differenceAngleT:
+                </div>
+                <div class="unit one-quarter" id="differenceAngleT">
+                    &nbsp;
+                </div>
+              <!--- --->
+
+                <div class="unit one-quarter">
+                    pedVelocity:
+                </div>
+                <div class="unit one-quarter" id="pedVelocity_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    otherVelocity:
+                </div>
+                <div class="unit one-quarter" id="otherVelocity_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    relativeVelocity:
+                </div>
+                <div class="unit one-quarter" id="relativeVelocity_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    E:
+                </div>
+                <div class="unit one-quarter" id="E_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    interactionVector:
+                </div>
+                <div class="unit one-quarter" id="interactionVector_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    result:
+                </div>
+                <div class="unit one-quarter" id="result_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    forceVelocity:
+                </div>
+                <div class="unit one-quarter" id="forceVelocity_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    forceAngle:
+                </div>
+                <div class="unit one-quarter" id="forceAngle_">
+                    &nbsp;
+                </div>
+                <div class="unit one-quarter">
+                    resultAngle:
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

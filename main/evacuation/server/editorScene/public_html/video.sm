@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>video</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var videoName = "{{videoName}}";
+        </script>
+
+        <script src="../js/float16ToFloat32"></script>
+        <script src="../js/pako"></script>
+        <script src="../js/ready"></script>
+        <script src="../js/binaryParser"></script>
+        <script src="../js/zoom"></script>
+        <script src="../js/simulation"></script>
+        <script src="../js/scene"></script>
+        <script src="../js/player"></script>
+        <script src="../js/animation"></script>
+        <link href="../css/animation" type="text/css" rel="stylesheet">
+        <link href="../css/gridism" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="blockApp">
+            <svg version="1.1"
+                id="loader-1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="400px"
+                height="400px"
+                viewBox="0 0 40 40"
+                enable-background="new 0 0 40 40"
+                xml:space="preserve"
+                id="loadAnimation">
+
+                <path opacity="0.2"
+                fill="#000"
+                d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+                s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+                c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+
+                <path fill="#000"
+                    d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+                    C22.32,8.481,24.301,9.057,26.013,10.047z">
+                    <animateTransform attributeType="xml"
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 20 20"
+                        to="360 20 20"
+                        dur="0.5s"
+                        repeatCount="indefinite"/>
+                </path>
+          </svg>
+        </div>
+        <canvas id="simulation">
+
+        </canvas>
+        <canvas id="scene">
+
+        </canvas>
+        <div id="footer">
+            <input id="play" value="play" type="button" disabled="disabled">
+            <input id="next" value="next" type="button" disabled="disabled">
+            <input id="playBack" value="playBack" type="button" disabled="disabled">
+            <input id="previous" value="previous" type="button" disabled="disabled">
+            <input id="stop" value="stop" type="button" disabled="disabled">
+            <input id="moreSpeed" value="+" type="button" disabled="disabled">
+            <input id="speed" value="1" type="text" maxlength="2" size="2">
+            <input id="lessSpeed" value="-" type="button" disabled="disabled">
+            <input id="cleanForces" value="cleanForces" type="button" disabled="disabled">
+        </div>
+        <div id="tools">
+          <div class="grid">
+            <div class="unit one-quarter">
+            S:
+            </div>
+            <div class="unit three-quarters" id="social">
+            &nbsp;
+            </div>
+            <div class="unit one-quarter">
+            SG:
+            </div>
+            <div class="unit three-quarters" id="socialGranular">
+            &nbsp;
+            </div>
+            <div class="unit one-quarter">
+            O:
+            </div>
+            <div class="unit three-quarters" id="obstacle">
+            &nbsp;
+            </div>
+            <div class="unit one-quarter">
+            OG:
+            </div>
+            <div class="unit three-quarters" id="obstacleGranular">
+            &nbsp;
+            </div>
+            <div class="unit one-quarter">
+            D:
+            </div>
+            <div class="unit three-quarters" id="desired">
+            &nbsp;
+            </div>
+          </div>
+
+        </div>
+    </body>
+</html>

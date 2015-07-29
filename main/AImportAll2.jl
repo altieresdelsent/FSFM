@@ -1,0 +1,148 @@
+windowsBaseFolder = "C:/Users/altieres/Box Sync/Copy/Mestrado/Dissertacao/materialJuliaLang"
+linuxBaseFolder = "/home/altieres/Copy/Mestrado/Dissertacao/materialJuliaLang"
+#cd(@linux?linuxBaseFolder:windowsBaseFolder)
+print("start loading code \n")
+print("\t start loading doEvacuation \n")
+include("evacuation/doEvacuation.jl")
+print("\t do Evacuation loaded\n")
+print("\t start loading saveAll \n")
+include("saveAll.jl")
+print("\t saveAll loaded \n")
+print("\t start loading loadAll \n")
+include("evacuation/load/loadAll.jl")
+print("\tloadAll loaded \n")
+print("\t start loading saveSimulation \n")
+include("evacuation/load/saveSimulation.jl")
+print("\t save Simulation loaded \n")
+print("end loading code \n")
+#=include("statistics/prepareScenarios.jl")
+
+include("statistics/runScenarios.jl")
+
+number = 1
+#prepareScenarios("corredor",number, "corredorT")
+=#
+#runScenarios("corredorT",number)
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy0",scene,crowd,log)
+print("\t simulation ended \n")
+#saveAll(log)
+log = 0.0
+
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy1",scene,crowd,log)
+print("\t simulation ended \n")
+log = 0.0
+
+
+
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy2",scene,crowd,log)
+print("\t simulation ended \n")
+
+log = 0.0
+
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy3",scene,crowd,log)
+print("\t simulation ended \n")
+
+log = 0.0
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy4",scene,crowd,log)
+print("\t simulation ended \n")
+
+log = 0.0
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy5",scene,crowd,log)
+print("\t simulation ended \n")
+log = 0.0
+
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy6",scene,crowd,log)
+print("\t simulation ended \n")
+
+log = 0.0
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy7",scene,crowd,log)
+print("\t simulation ended \n")
+
+log = 0.0
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy8",scene,crowd,log)
+print("\t simulation ended \n")
+log = 0.0
+
+print("start simulation\n")
+print("\t start loading scene and crowd \n")
+(scene,crowd) = loadAllXML("evacuation3")
+print("\t loaded scene and crowd \n")
+print("\t running simulation \n")
+log = doEvacuation(scene,crowd,60000)
+print("\t simulation ended \n")
+print("\t saving simulation  \n")
+saveSimulation("desiredFuzzy9",scene,crowd,log)
+print("\t simulation ended \n")
+log = 0.0

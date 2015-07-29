@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var worker = new Worker("js/playerWebWorker");
+            var array = new Float32Array(new ArrayBuffer(100*4));
+            for(var indice = 0; indice < array.length; indice++) {
+                array[indice] = indice/10;
+            }
+            worker.onmessage = function(msg) {
+                alert(msg.data);
+            };
+            worker.onerror = function(msg) {
+                console.log(msg);
+            };
+            worker.postMessage(array);     
+        </script>
+            
+    </head>
+    <body>
+        <div id="log">TODO write content</div>
+    </body>
+</html>

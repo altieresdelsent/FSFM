@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/11/2014, 14:55:22
+    Author     : altieres
+*/
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+}
+html {
+    display: block;
+}
+#simulation {
+    z-index: 99;
+}
+#scene {
+    z-index: 98;
+}
+#footer {
+    display: block;
+    position: absolute;
+    left:0;
+}
+#tools {
+    display: block;
+    position:absolute;
+    top:0;
+}
+
+[type=button] {
+    
+}
+
+
+#blockApp {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top:0;
+    left:0;
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0.2;    
+}
+
+svg path,
+svg rect{
+  fill: #0FFFFF;
+}

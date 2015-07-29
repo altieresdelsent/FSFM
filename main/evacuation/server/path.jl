@@ -1,0 +1,1 @@
+const pathBaseFSFM = @linux? "/home/altieres/Copy/Mestrado/Dissertacao/materialJuliaLang":"C:/Users/altieres/Box Sync/Copy/Mestrado/Dissertacao/materialJuliaLang"

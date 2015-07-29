@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/ready"></script>
+        <script src="js/fabric"></script>
+        <script src="js/base64ToArrayBuffer"></script>
+        <script src="js/player"></script>
+        <script src="js/objects"></script>
+        <script src="js/editor"></script>
+        <link href="css/editor.css" type="text/css" rel="stylesheet">
+    </head>
+    <body id="allll">
+        <div id="windowFile">
+            <div id="fileScroll">
+                <div id="file" contenteditable="true">
+
+                </div>
+            </div>
+            <div id="submenu">
+                <input type="button" id="loadFile" value="Carregar e Fechar">
+            </div>
+        </div>
+        <div>
+            <canvas id="scene" style="width: 100%;height: 100%; display: block">
+
+            </canvas>
+        </div>
+        <div id="tools">
+            <table class="grid">
+                <tr class="row">
+                    <td class="column">
+                        &nbsp;
+                    </td>
+                    <td class="column">
+                        <img id="up" class="menuZoom" src="img/up.svg" alt="up">
+                    </td>
+                    <td class="column">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="column">
+                        <img id="left" class="menuZoom" src="img/left.svg" alt="left">
+                    </td>
+                    <td class="column">
+                        &nbsp;
+                    </td>
+                    <td class="column">
+                        <img id="right" class="menuZoom" src="img/right.svg" alt="right">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="column">
+                        &nbsp;
+                    </td>
+                    <td class="column">
+                        <img id="down" class="menuZoom" src="img/down.svg" alt="down">
+                    </td>
+                    <td class="column">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+            <input id="change" type="range" min="1" max="100" value="1">
+            <input id="zoom" type="range" min="-4" max="4" step="0.001" value="0">
+            <input id="zoom2" type="range" min="-0.4" max="0.4" step="0.001" value="0">
+            <input id="zoom3" type="range" min="-0.04" max="0.04" step="0.001" value="0">
+            <input id="carregarXml" type="button" value="Carregar XML">
+            <input id="newPedestrianRegion" type="button" value="Pedestrian">
+            <input id="newObstacle" type="button" value="Obstacle">
+            <input id="newWayPoint" type="button" value="WayPoint">
+            <input id="newObjective" type="button" value="Objective">
+            <input id="SelectPedestrian" type="button" value="SelectPedestrian">
+            <input id="play" type="button" disabled="disabled" value="Play">
+            <input id="playBack" type="button" disabled="disabled" value="Play Back">
+            <input id="stop" type="button" disabled="disabled" value="Stop">
+            <input id="next" type="button" disabled="disabled" value="Next">
+            <input id="previous" type="button" disabled="disabled" value="Previous">
+            <div id="informationPedestrian">
+                <div class="row">
+                    <div class="cell">position:</div>
+                    <div id="position">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">velocity:</div>
+                    <div id="velocity">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">acceleration:</div>
+                    <div id="acceleration">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">socialForce:</div>
+                    <div id="socialForce">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">socialGranularForce:</div>
+                    <div id="socialGranularForce">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">obstacleForce:</div>
+                    <div id="obstacleForce">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">obstacleGranularForce:</div>
+                    <div id="obstacleGranularForce">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">desiredForce:</div>
+                    <div id="desiredForce">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">lookAheadForce:</div>
+                    <div id="lookAheadForce"></div>
+                </div>
+                <div class="row">
+                    <div class="cell">radius:</div>
+                    <div id="radius">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">maxVelocity:</div>
+                    <div id="maxVelocity">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">active:</div>
+                    <div id="active">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell">wayPoint:</div>
+                    <div id="wayPoint">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

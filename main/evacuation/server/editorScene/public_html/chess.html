@@ -1,0 +1,119 @@
+<DOCTYPE !>
+<html>
+	<head>
+		<title>video</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			span {
+				width: 2em;
+				height: 2em;
+				display: block;
+				font-size: 5em;
+			}
+
+			.left {
+				float: left;
+				text-align: left;
+			}
+
+			.right {
+				float: right;
+				text-align: right;
+			}
+			.twoDots {
+				width: 0.5em;
+				text-align: center;
+			}
+			body {
+				width: 100%;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="hours1" class="left">
+		</span>
+		<span class="twoDots left">
+		:
+		</span>
+		<span id="minutes1" class="left">
+		</span>
+		<span class="twoDots left">
+		:
+		</span>
+		<span id="seconds1" class="left">
+		</span>
+		
+		<span id="seconds2" class="right">
+		</span>
+		<span class="twoDots right">
+		:
+		</span>
+		<span id="minutes2" class="right">
+		</span>
+		<span class="twoDots right">
+		:
+		</span>
+		<span id="hours2" class="right">
+		</span>
+		
+		
+
+		<script>
+			"use script";
+			var totalTime1 = 0,
+				totalTime2 = 0,
+				one = false,
+				two = false,
+				miliSeconds1 = 0,
+				miliSeconds2 = 0,
+				seconds1 = 0,
+				seconds2 = 0;
+
+			function changeSeconds() {
+				if(one === true) {
+					miliSeconds1++;
+				}
+
+				if(two === true) {
+					miliSeconds2++;
+				}
+				if((miliSeconds1 % 100) === 0 || (miliSeconds2 % 100) === 0) {
+					seconds1 = Math.floor(miliSeconds1 / 100);
+					seconds2 = Math.floor(miliSeconds2 / 100);
+					document.getElementById("seconds1").textContent = seconds1 % 60;
+					document.getElementById("seconds2").textContent = seconds2 % 60;  
+					
+					document.getElementById("minutes1").textContent = Math.floor(seconds1 / 60);
+					document.getElementById("minutes2").textContent = Math.floor(seconds2 / 60);
+
+					document.getElementById("hours1").textContent = Math.floor(seconds1 / 3600);
+					document.getElementById("hours2").textContent = Math.floor(seconds2 / 3600);
+				}
+				//setTimeout(changeSeconds,10);
+			}
+			setInterval(changeSeconds,10)
+			//changeSeconds();
+
+			var keyCodes = {
+			        c:67,
+			        leftArrow:37,
+			        rightArrow:39,
+			        spaceBar:32
+			    };
+
+			window.addEventListener("keydown", function(e) {
+				if(!e.altKey && !e.shiftKey && !e.ctrlKey && e.keyCode === keyCodes.spaceBar) {
+					if((!one)&&(!two)) {
+						one = true;
+					} else {
+						one = !one;
+						two = !two;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
