@@ -1,0 +1,26 @@
+module types
+
+    using JuliaFuzzy.Engine
+    #using Debug
+    export WayPoint, Objective, Obstacle, ObstacleCache, Pedestrian, Scene, Region, PedestrianRegion, Point, Crowd
+    abstract baseRegion
+
+    isdefined(:Point) || include("load/types/Point.jl")
+
+    isdefined(:WayPoint) || include("load/types/WayPoint.jl")
+    isdefined(:Objective) || include("load/types/Objective.jl")
+
+    #isdefined(:RegionRadian) || include("load/types/RegionRadian.jl")
+    #isdefined(:isVisible) || include("visibility/isVisible.jl")
+    #isdefined(:closestPoint) || include("forces/obstacleForce/closestPoint.jl")
+
+    isdefined(:Obstacle) || include("load/types/Obstacle.jl")
+    #isdefined(:ObstacleCache) || include("types/ObstacleCache.jl")
+    isdefined(:Pedestrian) || include("load/types/Pedestrian.jl")
+    isdefined(:PedestrianRegion) || include("load/types/PedestrianRegion.jl")
+
+    isdefined(:Region) || include("load/types/Region.jl")
+    isdefined(:Crowd) || include("load/types/Crowd.jl")
+    isdefined(:Scene) || include("load/types/Scene.jl")
+    isdefined(:plotScene) || include("load/types/plotScene.jl")
+end
