@@ -56,5 +56,5 @@ function sceneToBytes(scenario::Scene,crowd::Crowd)
 	saveObjective(scenario.objectives)
 	seekstart(buffer)
 
-	return readbytes(buffer)
+	return buffer
 end

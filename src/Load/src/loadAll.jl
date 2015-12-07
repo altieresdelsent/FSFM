@@ -5,7 +5,7 @@ using ..isVisible
 using LibExpat
 
 function loadAll(file::AbstractString)
-#=
+
 		fileReader = open("$baseFolderScenario/$file.scn","r")
 
 		function processPedestrianRegion(n)
@@ -107,7 +107,6 @@ function loadAll(file::AbstractString)
         #Crowd(1.0,1.0,1.0,2.0)
         crowd = createCrowd(pedestrians,scene.wayPoints,scene.obstacles)
         return (scene,crowd)
-        =#
 end
 
 function loadAllXML(file::AbstractString)

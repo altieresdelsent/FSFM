@@ -6,7 +6,7 @@ function getDimenAndDataSimulation(simulation)
 
 	#print("getDimenAndDataSimulation lengthSimulation:$lengthSimulation \n")
 
-	frames = Array(Array{Uint8,1},0)
+	frames = Array(Array{UInt8,1},0)
 	contador = 1
 	a = read(bufferSimulation, Int32)
 	#print("getDimenAndDataSimulation a:$a \n")
@@ -20,7 +20,7 @@ function getDimenAndDataSimulation(simulation)
 		#total = total + n
 		#print("getDimenAndDataSimulation n:$n \n")
 		#print("getDimenAndDataSimulation total:$total \n")
-		frame = Array(Uint8,n)
+		frame = Array(UInt8,n)
 		readbytes!(bufferSimulation, frame)
 		push!(frames,frame)
 		contador = contador + n

@@ -44,7 +44,7 @@ function saveLog(crowd,pedestriansLog,i)
         pedestriansLog[i,indPed,index] = Float32(ped.maxVelocity)
         index = index + 1
         pedestriansLog[i,indPed,index] = Float32(ped.active? 1.0: 0.0)=#
-        infPosition = infPosition + 1
+        #=infPosition = infPosition + 1
         pedestriansLog[infPosition,contador,i] = Float32(pedestrian.wayPoint.position.x)
         infPosition = infPosition + 1
         pedestriansLog[infPosition,contador,i] = Float32(pedestrian.wayPoint.position.y)
@@ -53,7 +53,7 @@ function saveLog(crowd,pedestriansLog,i)
         infPosition = infPosition + 1
         pedestriansLog[infPosition,contador,i] = Float32(pedestrian.wayPoint.deepness)
         infPosition = infPosition + 1
-        pedestriansLog[infPosition,contador,i] = Float32(pedestrian.wayPoint.distance)
+        pedestriansLog[infPosition,contador,i] = Float32(pedestrian.wayPoint.distance)=#
     end
 
 end

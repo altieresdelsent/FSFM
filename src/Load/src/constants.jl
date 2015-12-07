@@ -16,5 +16,5 @@ const baseFolderWindows = "C:/Users/altieres/Box Sync/Copy/Mestrado/Dissertacao/
 const baseFolderLinux = "/home/altieres/Dropbox/Mestrado/FSFM/src/"
 const baseFolder = @linux? baseFolderLinux:baseFolderWindows
 
-const baseFolderScenario = "$baseFolder/scenarios"
+const baseFolderScenario = "/home/altieres/Dropbox/Mestrado/scenarios"
 const baseFolderSimulation = "/home/altieres/"
